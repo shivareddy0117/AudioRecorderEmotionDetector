@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import numpy as np
 import random
 
-model_id = "gregH/Radar-Dolly-V2-3B"
+model_id = "TrustSafeAI/RADAR-Vicuna-7B"
 device = "cpu"
 detector = transformers.AutoModelForSequenceClassification.from_pretrained(model_id)
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
