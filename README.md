@@ -1,6 +1,6 @@
 ---
 title: RADAR AI Text Detector
-emoji: 🏢
+emoji: 📡
 colorFrom: yellow
 colorTo: yellow
 sdk: gradio
