@@ -41,6 +41,7 @@ description = "An AI-written text detector based on the roberta-large model (fin
 intf = gr.Interface(fn=detect, inputs=image, outputs=label, title=title,
                     description=description)
 with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, description=description) as intf:
+    gr.Markdown("Disclaimer: The detector is not perfect. It may lead to incorrect detections (see examples below).")
     with gr.Tab("AI-text examples"):
         gr.Examples(AI_texts, inputs=image, outputs=label)
     with gr.Tab("Human-text examples"):
