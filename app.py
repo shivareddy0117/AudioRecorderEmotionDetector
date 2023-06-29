@@ -22,7 +22,7 @@ def detect(text):
           }
     return res
 
-image = gr.Textbox()
+image = gr.Textbox(info ="Disclaimer: The detector is not perfect. It may lead to incorrect detections (see examples below).")
 label = gr.Label()
 AI_texts = [
     "Greetings I would like to express my utmost gratitude for the extraordinary experience I had while visiting our neighboring planet Mars. It has been a decade since I last scrutinized Mars' features and the information gathered during my journey has revitalized my fascination for this captivating planet. Despite the technological advancements in Mars exploration I was still able to witness the landscape in its natural state capturing breathtaking photographs and filming videos that showcased the red planet's impressive terrain fascinating geology and intriguing scientific discoveries. This experience has forever changed my perception of humanity and inspired my passion for space exploration hoping to further contribute to our understanding of the universe and our place within it.",
@@ -41,7 +41,6 @@ description = "An AI-written text detector based on the roberta-large model (fin
 intf = gr.Interface(fn=detect, inputs=image, outputs=label, title=title,
                     description=description)
 with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, description=description) as intf:
-    gr.Markdown("Disclaimer: The detector is not perfect. It may lead to incorrect detections (see examples below).")
     with gr.Tab("AI-text examples"):
         gr.Examples(AI_texts, inputs=image, outputs=label)
     with gr.Tab("Human-text examples"):
