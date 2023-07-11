@@ -58,7 +58,7 @@ with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, descripti
                r"      eprint={2307.03838},"+"\n" + \
                r"      archivePrefix={arXiv},"+"\n" + \
                r"      primaryClass={cs.CL}"+"\n" + \
-               "}"+""\n"+"```"
+               "}"+"\n"+"```"
     gr.Markdown(citation)
 
 intf.launch(inline=False)
