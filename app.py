@@ -50,14 +50,14 @@ with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, descripti
         gr.Examples(Human_texts, inputs=image, outputs=label)
     with gr.Tab("Examples of incorrect detections"):
         gr.Examples(Constitution_inputs, inputs=image, outputs=label)
-    citation= r"If you use this detector, please cite the following paper: ```bash@misc{hu2023radar,
-      title={RADAR: Robust AI-Text Detection via Adversarial Learning}, 
-      author={Xiaomeng Hu and Pin-Yu Chen and Tsung-Yi Ho},
-      year={2023},
-      eprint={2307.03838},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-    }```"
+    citation = r"If you use this detector, please cite the following paper: ```bash@misc{hu2023radar, \n" \
+           r"      title={RADAR: Robust AI-Text Detection via Adversarial Learning}, \n" \
+           r"      author={Xiaomeng Hu and Pin-Yu Chen and Tsung-Yi Ho}, \n" \
+           r"      year={2023}, \n" \
+           r"      eprint={2307.03838}, \n" \
+           r"      archivePrefix={arXiv}, \n" \
+           r"      primaryClass={cs.CL} \n" \
+           r"    }```"
     gr.Markdown(citation)
 
 intf.launch(inline=False)
