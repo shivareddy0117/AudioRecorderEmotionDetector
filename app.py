@@ -42,7 +42,7 @@ title = "RADAR: Robust AI-text Detection via Adversarial leanRning"
 description = "An AI-written text detector based on the roberta-large model (fine-tuned with Vicuna-7B).\nSee https://arxiv.org/abs/2307.03838 for details.\nProject Page: https://radar.vizhub.ai/"
 
 intf = gr.Interface(fn=detect, inputs=image, outputs=label, title=title,
-                    description=gr.Markdown(description))
+                    description=description)
 with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, description=description) as intf:
     with gr.Tab("AI-text examples"):
         gr.Examples(AI_texts, inputs=image, outputs=label)
