@@ -5,43 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
+    <style>
+        /* ... Your CSS styling goes here ... */
+    </style>
 </head>
 <body>
-   <form id="jobApplicationForm" action="your_server_side_script.php" method="post">
+
+<form id="jobApplicationForm" action="your_server_side_script.php" method="post">
     <h1>Job Application Form</h1>
-    
+
     <label for="fullname">Full Name:</label>
     <input type="text" id="fullname" name="fullname" required>
-    
+
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
-    
+
     <label for="phone">Phone:</label>
     <input type="tel" id="phone" name="phone">
-    
+
     <label for="resume">Upload Resume:</label>
     <input type="file" id="resume" name="resume">
-    
+
     <label for="message">Additional Message:</label>
     <textarea id="message" name="message" rows="4" cols="50"></textarea>
-    
+
     <input type="submit" value="Submit Application">
 </form>
 
-    <!-- Your HTML content will go here -->
-<script>
-    document.getElementById('jobApplicationForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // prevent the form from submitting
-        
-        // Now you can send form data to your server using AJAX here if needed.
-        
-        // Display thank you message
-        alert('Thank you for the application!');
-        
-        // Optionally, clear the form fields
-        this.reset();
-    });
-</script>
+<!-- Add the external script.js file -->
+<script src="script.js"></script>
 
 </body>
 </html>
