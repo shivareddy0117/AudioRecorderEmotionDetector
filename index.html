@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <style src="styles.css">
         /* ... Your CSS styling goes here ... */
     </style>
 </head>
-<body>
 
-<form id="jobApplicationForm" action="your_server_side_script.php" method="post">
-    <h1>Job Application Form</h1>
+<body class="bg-light">
 
-    <label for="fullname">Full Name:</label>
-    <input type="text" id="fullname" name="fullname" required>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+                    <form id="jobApplicationForm" action="your_server_side_script.php" method="post">
+                        <h1 class="text-center mb-4">Job Application Form</h1>
 
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone">
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" class="form-control" id="fullname" name="fullname" required>
+                        </div>
 
-    <label for="resume">Upload Resume:</label>
-    <input type="file" id="resume" name="resume">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
 
-    <label for="message">Additional Message:</label>
-    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
 
-    <input type="submit" value="Submit Application">
-</form>
+                        <div class="form-group">
+                            <label for="resume">Upload Resume:</label>
+                            <input type="file" class="form-control-file" id="resume" name="resume">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Message:</label>
+                            <textarea id="message" class="form-control" name="message" rows="4"></textarea>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <input type="submit" class="btn btn-primary" value="Submit Application">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- Add the external script.js file -->
 <script src="script.js"></script>
 
 </body>
+
 </html>
