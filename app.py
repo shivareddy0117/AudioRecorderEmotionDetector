@@ -62,3 +62,4 @@ with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, descripti
     gr.Markdown(citation)
 
 intf.launch(inline=False)
+
