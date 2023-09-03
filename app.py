@@ -63,3 +63,4 @@ with gr.Interface(fn=detect, inputs=image, outputs=label, title=title, descripti
 
 intf.launch(inline=False)
 
+
