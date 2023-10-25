@@ -7,6 +7,7 @@ import random
 
 model_id = "TrustSafeAI/RADAR-Vicuna-7B"
 device = "cpu"
+
 detector = transformers.AutoModelForSequenceClassification.from_pretrained(model_id)
 tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
 detector.eval()
